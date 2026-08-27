@@ -3,6 +3,9 @@
 Local Kubernetes sandbox to experiment with the same stack we run in GCP —
 but disposable, offline, and free.
 
+> 📖 **Tutorial:** [The Playground Logbook](https://claude.ai/code/artifact/4891abee-3821-42c6-b67c-522e857de8ac) —
+> 27 graded tasks (Helm → ESO → ArgoCD → ingress/TLS) built around this repo, with progress tracking.
+
 ## What's in here
 
 | Piece | What it is | Why it's here |

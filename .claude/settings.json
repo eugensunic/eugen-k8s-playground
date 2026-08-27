@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath // empty' | { read -r f; case \"$f\" in *\"/charts/\"*) helm lint \"${CLAUDE_PROJECT_DIR:-.}/charts/hello\" || exit 2;; esac; }",
+            "statusMessage": "helm lint charts/hello",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

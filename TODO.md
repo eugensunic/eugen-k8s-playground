@@ -7,3 +7,7 @@
 - [ ] release loop: build and push `1.1.0`, bump `image.tag` in `values.yaml`, commit,
       watch ArgoCD roll it out
 - [ ] README: write the steps of the diagram as done here
+- [ ] drift: change the app by hand, e.g. `kubectl -n my-app scale deploy/my-app --replicas=5`
+      or `kubectl apply` of an edited Deployment, then watch ArgoCD show OutOfSync and
+      put it back. Needs `selfHeal: true` under `syncPolicy.automated` in
+      `argocd/my-app.yaml`, without it ArgoCD only reports the drift

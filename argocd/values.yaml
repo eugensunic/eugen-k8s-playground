@@ -1,0 +1,5 @@
+# values for the argo-cd Helm chart
+# helm upgrade --install argocd argo/argo-cd -n argocd --create-namespace -f argocd/values.yaml
+configs:
+  cm:
+    timeout.reconciliation: 60s   # how often ArgoCD polls git, default 180s

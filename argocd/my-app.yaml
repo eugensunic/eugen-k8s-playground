@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: my-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    repoURL: https://github.com/eugensunic/eugen-k8s-playground.git
     targetRevision: HEAD
-    path: guestbook
+    path: charts/my-app
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: my-app
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
     syncOptions:
       - CreateNamespace=true

@@ -1,5 +1,0 @@
-replicaCount: 1
-image: nginxinc/nginx-unprivileged:stable-alpine
-port: 8080
-# set to true after applying eso/ to mount the ESO-synced secret
-useEsoSecret: false

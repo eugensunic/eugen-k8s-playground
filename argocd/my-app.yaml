@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/eugensunic/eugen-k8s-playground.git
-    targetRevision: HEAD
+    targetRevision: main
     path: charts/my-app
   destination:
     server: https://kubernetes.default.svc

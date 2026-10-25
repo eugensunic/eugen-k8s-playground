@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/eugensunic/eugen-k8s-playground.git
+    repoURL: https://github.com/eugensunic-adc/-eugen-k8s-playground.git
     targetRevision: HEAD
     path: charts/my-app
   destination:
